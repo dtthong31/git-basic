@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        body {
+            font-family: 'Georgia';
+        }
+
+        h1 {
+            font-size: 50px;
+            text-align: center;
+            color: #28a745;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .bar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 20%;
+            height: 100%;
+            border-right: 1px solid rgba(0, 0, 0, 0.07);
+            z-index: 1;
+            overflow: hidden;
+            overflow-y: auto;
+            background-color: black;
+        }
+
+        .home {
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 80%;
+            height: 100%;
+            border-right: 1px solid rgba(0, 0, 0, 0.07);
+            z-index: 2;
+            overflow: hidden;
+            overflow-y: auto;
+            background-color: #fff;
+        }
+
+        nav ul {
+            text-align: center;
+            padding-left: 0%;
+        }
+
+        nav a {
+            color: #28a745;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .section {
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="bar">
+        <img src="./img/avatar.jpeg" width="250px" height="250px" style="border-radius: 60px; display: block;
+                margin-left: auto;
+                margin-right: auto;" />
+        <p style="color: white; font-size: 30px; font-weight: bold;text-align: center;">
+            HONG DOAN</p>
+        <nav>
+            <ul><a href="#home">Home</a></ul>
+            <ul><a href="#AboutMe">About Me</a></ul>
+            <ul><a href="#Resume">Resume</a></ul>
+            <ul><a href="#Contact">Contact</a></ul>
+        </nav>
+    </header>
+    <div class="home">
+        <section id="home" class="section" style="align-items: center; justify-content: center;">
+            <div>
+                <h2>Wellcome</h2>
+                <h1>I'm a IOS Developer</h1>
+                <h2>based in TP.Ho Chi Minh, Viet Nam</h2>
+            </div>
+        </section>
+        <section id="AboutMe" class="section">
+            <div style="align-items: center;
+            justify-content: center;">
+                <h2 style="font-weight: 600; opacity: 0.1; font-size: 100px;  color: #28a745;">ABOUT ME</h2>
+                <p
+                    style="position: absolute; text-align: center; top: 30%; left: 30%; font-size: 35px; font-weight: bold;">
+                    <u>Know Me More</u>
+                </p>
+            </div>
+            <div style="width: 400px; height: 200px;">
+                <p>
+                    The ability to quickly learn and adapt. I've prioritized honing my thinking skills and gaining
+                    experience in this field throughout my career.Swift is the most widely used programming
+                    language.
+                    Someone who enjoys socializing with others. Someone who regularly contributes ideas, points of
+                    view, and solutions at work
+                </p>
+            </div>
+        </section>
+        <section id="Resume" class="section">
+            <div>
+                <h2>Resume</h2>
+
+            </div>
+        </section>
+        <section id="Contact" class="section">
+            <div>
+                <h2>Contact</h2>
+
+            </div>
+        </section>
+
+    </div>
+</body>
+
+</html>
