@@ -1,0 +1,322 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+.container {
+    display: flex;
+    font-family: Georgia;
+    width: 100%;
+    height: 100%;
+}
+
+.menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 20%;
+    height: 100%;
+    border-right: 1px solid rgba(0, 0, 0, 0.07);
+    z-index: 1;
+    overflow: hidden;
+    overflow-y: auto;
+    background-color: black;
+    color: aliceblue;
+    font-size: 20px;
+}
+
+.menu nav {
+    display: contents;
+}
+
+.menu nav ul {
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: #28a745;
+}
+
+.menu nav ul img {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.section {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 80%;
+    height: 100%;
+    border-right: 1px solid rgba(0, 0, 0, 0.07);
+    z-index: 2;
+    overflow: hidden;
+    overflow-y: auto;
+    background-color: #fff;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#home h1 {
+    color: #28a745;
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#aboutMe {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 10px;
+    height: fit-content;
+}
+
+.aboutMeHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutMeHeader h1 {
+    font-weight: 600;
+    opacity: 0.1;
+    font-size: 100px;
+    color: #28a745;
+}
+
+.aboutMeHeader p {
+    position: absolute;
+    text-align: center;
+    top: 13%;
+    left: 40%;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.aboutMeContent {
+    width: 60%;
+    height: 100%;
+    padding-left: 60px;
+}
+
+.aboutMeContent p span {
+    color: #28a745;
+    font-size: 26px;
+}
+
+.aboutMeFormSection {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.aboutMeFormInfo {
+    width: 30%;
+    height: 100%;
+    padding-left: 20px;
+    padding-right: 40px;
+    padding-top: 0px;
+}
+
+.aboutMeFormInfo ul {
+    list-style-type: none;
+}
+
+.aboutMeFormInfo ul li {
+    border-bottom: 1px solid #eaeaea;
+    padding: 10px;
+}
+
+.aboutMeFormInfo ul li span {
+    font-weight: bold;
+}
+
+#resume {
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+}
+
+.resumeHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resumeHeader h1 {
+    font-weight: 600;
+    opacity: 0.1;
+    font-size: 100px;
+    color: #28a745;
+}
+
+.resumeHeader p {
+    position: absolute;
+    text-align: center;
+    top: 12%;
+    left: 44%;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.resumeSection {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.education {
+    border: 2px solid #28a745;
+    margin: 0 50px 10px 50px;
+    width: 400px;
+    border-radius: 20px;
+    padding-left: 50px;
+}
+
+.education p {
+    background-color: #28a745;
+    width: fit-content;
+    padding: 2px 5px;
+    border-radius: 3px;
+    color: #eaeaea;
+}
+
+@media (max-width: 1510px) {
+    .aboutMeHeader p {
+        top: 9%;
+    }
+
+    .resumeHeader p {
+        top: 9%;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+
+    .container {
+        display: block;
+        font-family: Georgia;
+        width: 100%;
+        height: 100%;
+    }
+
+    .menu {
+        width: 100%;
+        height: 0%;
+        border-right: 1px solid rgba(0, 0, 0, 0.07);
+
+        background-color: black;
+        color: aliceblue;
+        font-size: 20px;
+    }
+
+    .section {
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+    }
+
+    .aboutMeHeader h1 {
+        font-size: 70px;
+    }
+
+    .aboutMeHeader p {
+        font-size: 24px;
+        top: 8%;
+        left: 38%;
+    }
+
+    .resumeHeader h1 {
+        font-size: 70px;
+    }
+
+    .resumeHeader p {
+        font-size: 24px;
+        top: 6%;
+    }
+
+    .aboutMeFormSection {
+        flex-direction: row;
+    }
+
+    .aboutMeContent {
+        width: 100%;
+        padding-right: 40px;
+        padding-top: 0px;
+    }
+
+    .aboutMeFormInfo {
+        width: 100%;
+    }
+
+    #resume {
+        height: fit-content;
+    }
+}
+
+/* For desktop: */
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
