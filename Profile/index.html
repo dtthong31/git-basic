@@ -12,13 +12,14 @@
     <div class="container">
         <div class="menu">
             <nav class="col-10">
-                <ul><img src="/Profile/img/avatar.jpeg"></ul>
+                <ul><img onclick="clickAvartar()" src="/Profile/img/avatar.jpeg"></ul>
                 <ul>
                     <h3>HONG DOAN</h3>
                 </ul>
                 <ul><a href="#home">Home</a></ul>
-                <ul><a href="#aboutMe">About me</a></ul>
+                <ul><a href="#about-me">About me</a></ul>
                 <ul><a href="#resume">Resume</a></ul>
+                <ul><a href="#contact">Contact</a></ul>
             </nav>
         </div>
         <div class="section">
@@ -27,15 +28,15 @@
                 <h1>I'm a IOS Developer</h1>
                 <h3>based in TP.Ho Chi Minh, Viet Nam</h3>
             </div>
-            <div id="aboutMe" class="content">
-                <div class="aboutMeHeader">
+            <div id="about-me" class="content">
+                <div class="about-me-header">
                     <h1>ABOUT ME</h1>
                     <p>
                         <u>Know Me More</u>
                     </p>
                 </div>
-                <div class="aboutMeFormSection">
-                    <div class="aboutMeContent">
+                <div class="about-me-form-section">
+                    <div class="about-me-content">
                         <p>I'm <span>Hong Doan</span>, a IOS Developer</p>
                         <p>
                             The ability to quickly learn and adapt. I've prioritized honing my thinking skills and
@@ -49,7 +50,7 @@
                             view, and solutions at work a fetch
                         </p>
                     </div>
-                    <div class="aboutMeFormInfo">
+                    <div class="about-me-form-info">
                         <ul>
                             <li><span>Name:</span> Hong Doan</li>
                             <li><span>Email:</span> hongblack2000@gmail.com</li>
@@ -63,13 +64,13 @@
                 </div>
             </div>
             <div id="resume" class="content">
-                <div class="resumeHeader">
+                <div class="resume-header">
                     <h1>SUMMARY</h1>
                     <p>
                         <u>Resume</u>
                     </p>
                 </div>
-                <div class="resumeSection">
+                <div class="resume-section">
                     <div class="education">
                         <h3>IOS Developer</h3>
                         <p>2021 - present</p>
@@ -89,8 +90,36 @@
                     </div>
                 </div>
             </div>
+            <div id="contact" class="content col-12">
+                <form id="form1">
+                    <div class="form-row">
+                        <label for="Email">Email:</label>
+                        <input type="email" id="email" name="Email">
+                    </div>
+                    <div class="form-row">
+                        <label for="phonenumber">Phone number:</label>
+                        <input type="text" id="phonenumber" name="phonenumber">
+                    </div>
+                    <input class="button-submit" onclick="submitForm()" type="submit" value="Submit">
+                </form>
+            </div>
         </div>
     </div>
+    <script>
+        function clickAvartar() {
+            alert("You selected avatar")
+        }
+
+        function submitForm() {
+            let email = document.getElementById("email").value.indexOf("@")
+            let phonenumber = document.getElementById("phonenumber").value
+            if (email === "" || phonenumber === "") {
+                alert("Require input form")
+            } else {
+                alert("Input email and phone number form success")
+            }
+        }
+    </script>
 </body>
 
 </html>

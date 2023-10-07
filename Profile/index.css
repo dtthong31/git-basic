@@ -78,7 +78,14 @@ a {
     align-items: center;
 }
 
-#aboutMe {
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#about-me {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -86,20 +93,20 @@ a {
     height: fit-content;
 }
 
-.aboutMeHeader {
+.about-me-header {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.aboutMeHeader h1 {
+.about-me-header h1 {
     font-weight: 600;
     opacity: 0.1;
     font-size: 100px;
     color: #28a745;
 }
 
-.aboutMeHeader p {
+.about-me-header p {
     position: absolute;
     text-align: center;
     top: 13%;
@@ -108,23 +115,23 @@ a {
     font-weight: bold;
 }
 
-.aboutMeContent {
+.about-me-content {
     width: 60%;
     height: 100%;
     padding-left: 60px;
 }
 
-.aboutMeContent p span {
+.about-me-content p span {
     color: #28a745;
     font-size: 26px;
 }
 
-.aboutMeFormSection {
+.about-me-form-section {
     display: flex;
     flex-wrap: wrap;
 }
 
-.aboutMeFormInfo {
+.about-me-form-info {
     width: 30%;
     height: 100%;
     padding-left: 20px;
@@ -132,39 +139,39 @@ a {
     padding-top: 0px;
 }
 
-.aboutMeFormInfo ul {
+.about-me-form-info ul {
     list-style-type: none;
 }
 
-.aboutMeFormInfo ul li {
+.about-me-form-info ul li {
     border-bottom: 1px solid #eaeaea;
     padding: 10px;
 }
 
-.aboutMeFormInfo ul li span {
+.about-me-form-info ul li span {
     font-weight: bold;
 }
 
 #resume {
     width: 100%;
-    height: 100%;
+    height: fit-content;
     justify-content: flex-start;
 }
 
-.resumeHeader {
+.resume-header {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.resumeHeader h1 {
+.resume-header h1 {
     font-weight: 600;
     opacity: 0.1;
     font-size: 100px;
     color: #28a745;
 }
 
-.resumeHeader p {
+.resume-header p {
     position: absolute;
     text-align: center;
     top: 12%;
@@ -173,7 +180,7 @@ a {
     font-weight: bold;
 }
 
-.resumeSection {
+.resume-section {
     display: flex;
     flex-wrap: wrap;
 }
@@ -194,12 +201,52 @@ a {
     color: #eaeaea;
 }
 
+#form1 {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #28a745;
+    width: 400px;
+    border-radius: 20px;
+    padding: 10px 50px 10px 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-row {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.form-row input {
+    height: 35px;
+    width: 270px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.form-row label {
+    width: 150px;
+}
+
+.button-submit {
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 15px;
+}
+
 @media (max-width: 1510px) {
-    .aboutMeHeader p {
+    .about-me-header p {
         top: 9%;
     }
 
-    .resumeHeader p {
+    .resume-header p {
         top: 9%;
     }
 }
@@ -234,36 +281,36 @@ a {
         background-color: #fff;
     }
 
-    .aboutMeHeader h1 {
+    .about-me-header h1 {
         font-size: 70px;
     }
 
-    .aboutMeHeader p {
+    .about-me-header p {
         font-size: 24px;
         top: 8%;
         left: 38%;
     }
 
-    .resumeHeader h1 {
+    .resume-header h1 {
         font-size: 70px;
     }
 
-    .resumeHeader p {
+    .resume-header p {
         font-size: 24px;
         top: 6%;
     }
 
-    .aboutMeFormSection {
+    .about-me-form-section {
         flex-direction: row;
     }
 
-    .aboutMeContent {
+    .about-me-content {
         width: 100%;
         padding-right: 40px;
         padding-top: 0px;
     }
 
-    .aboutMeFormInfo {
+    .about-me-form-info {
         width: 100%;
     }
 
