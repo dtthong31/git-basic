@@ -13,11 +13,6 @@ header {
     padding: 0%;
 }
 
-section {
-    width: fit-content;
-    height: fit-content;
-}
-
 .navbar-container {
     display: flex;
     overflow: hidden;
@@ -29,40 +24,32 @@ section {
     font-size: 14px;
 }
 
+.navbar-container {
+    transition-duration: 5s;
+    transform: translateY(0px);
+}
+
 .navbar-container:hover {
-    height: 450px;
+    height: 420px;
     align-items: self-start;
 }
 
-.slider {
-    width: fit-content;
-    height: fit-content;
-}
-
 /* Auto slider banner*/
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
+.intro-page {
+    display: flex;
+    width: 100%;
+    height: 650px;
+    justify-content: center;
 }
 
-img {
-    vertical-align: middle;
-    /* width: min-content; */
-}
-
-.slideshow-container {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-}
-
-.slider-auto {
-    display: none;
+.slider {
+    display: flex;
+    height: 650px;
 }
 
 /* Content container */
 .container {
-    display: flex;
+    display: block;
     width: 100%;
     height: 100%;
     justify-content: center;
@@ -79,74 +66,11 @@ img {
     height: 50%;
 }
 
-.container-content {
+.other-service {
     display: flex;
     justify-content: center;
-    width: 80%;
-    height: 45%;
-}
-
-.content-about-me {
-    width: 48%;
-    padding-left: 30px;
-}
-
-.content-about-me p {
-    line-height: 1.6;
-    font-size: 15px;
-    text-align: justify !important;
-}
-
-.content-about-me h4 {
-    font-family: Barlow Condensed, sans-serif;
-    font-size: 14px;
-    color: #e70107;
-}
-
-.content-about-me h1 {
-    font-size: 40px;
-    letter-spacing: -1px;
-    text-transform: uppercase;
-    line-height: 1;
-}
-
-.image-about-me {
-    width: 40%;
-}
-
-.btn-view-more {
-    display: flex;
-    justify-content: center;
+    margin-top: 80px;
+    flex-direction: column;
     align-items: center;
-
-    border: 2px solid #f1f1f1;
-    width: 175px;
-    height: 60px;
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-.btn-view-more span {
-    display: flex;
-    align-items: baseline;
-}
-
-.btn-view-more span p {
-    font-size: 15px;
-    padding-left: 10px;
-}
-
-.fa-arrow-right {
-    padding-left: 10px;
-    color: #e70107;
-}
-
-.hover-btn:hover .fa-arrow-right {
-    background-color: #e70107;
-    color: #f1f1f1 !important;
-}
-
-.hover-btn:hover {
-    background-color: #e70107;
-    color: #f1f1f1 !important;
+    width: 100%;
 }
