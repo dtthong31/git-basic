@@ -1,0 +1,229 @@
+<div class="title-customer">customers talk about us</div>
+<div class="slideshow-customer">
+    <div class="slide-customers fade">
+        <div class="content-customer">
+            <div class="sub-content">
+                <h1>DOUGLAS STEVENSON</h1>
+                <p class="text-justify">
+                    I've been working with Team Nhile for the past 12 weeks, and they have
+                    demonstrated an extremely high level of professionalism and mastery in
+                    how they have executed the media strategy to help me build my
+                    subscriber base. They are extremely meticulous and detailed, and very
+                    proactive in their approach.<br />
+                    There are not many teams that I have worked with that operate so
+                    systematically and produce impeccable quality in a consistent and
+                    predictable manner. They find gems even with my current content and
+                    repurpose them in ways that are creative and innovative.<br />
+                    They have been amazing to work with, and have constantly exceeded my
+                    expectations. They play at a gradient that has become a tough act for
+                    others to follow.<br />
+                    10 stars out of 5!<br />
+                </p>
+                <a href="">Read more</a>
+            </div>
+            <img class="img-large" src="./img/Customer/douglas-large.webp" />
+            <img class="img-small" src="./img/Customer/douglas-small.webp" />
+        </div>
+    </div>
+    <div class="slide-customers fade">
+        <div class="content-customer">
+            <div class="sub-content">
+                <h1>JOVAN MEDRANO</h1>
+                <p class="text-justify">
+                    I have been working with the NhiLe team now for several months and all
+                    I can say is that it has been a great working experience. They are
+                    very polite and responsive in their communications. There’s a lot
+                    going on behind the scenes that they are taking care of - like
+                    editing, design, posting, and more - and everything just works in
+                    clockwork so I don’t need to worry about anything. Which helps me do
+                    what I do best, which is sharing the knowledge that will help my
+                    audience. I definitely highly recommend working with them!
+                </p>
+                <a href="" class="translate-item">Read more</a>
+            </div>
+            <img class="img-large" src="./img/Customer/jovan-medrano-large.webp" />
+            <img class="img-small" src="./img/Customer/jovan-medrano-small.webp" />
+        </div>
+    </div>
+    <div class="slide-customers">
+        <div class="content-customer">
+            <div class="sub-content">
+                <h1>MICHAEL LE</h1>
+                <p class="text-justify">
+                    After partnering up with NhiLe team my business has taken a quick
+                    positive turn. With a team full of talented individuals that are all,
+                    even though already on top of their profession, eager to learn and
+                    improve themselves every day. All with their own unique skill set they
+                    will, when combined, inevitably create greatness for you.<br />
+                    NhiLe team has helped my business to accelerate and grow really fast
+                    on social media platforms by offering and delivering professional
+                    management and modern techniques to create content and make sure my
+                    business will keep up with this fast growing online marketing
+                    industry.<br />
+                    My business and life has changed a lot after teaming up and I feel so
+                    grateful that our path has crossed. Outstanding methods on top of
+                    excellent teamwork equals extraordinary results.<br />
+                </p>
+                <a href="">Read more</a>
+            </div>
+            <img class="img-large" src="./img/Customer/michael-le-large.webp" />
+            <img class="img-small" src="./img/Customer/michael-le-small.webp" />
+        </div>
+    </div>
+</div>
+<br />
+<div style="text-align: center; margin-top: 120px">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<style>
+    .slideshow-customer {
+        width: 100%;
+    }
+
+    .content-customer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 80%;
+    }
+
+    .sub-content {
+        width: 450px;
+        padding-right: 80px;
+        overflow: hidden;
+        height: auto;
+        margin-top: -42px;
+    }
+
+    .sub-content h1 {
+        font-size: 40px;
+        margin: 0px;
+        font-family: Lucida Sans Unicode, monospace;
+    }
+
+    .sub-content a {
+        padding-top: 20px;
+    }
+
+    .title-customer {
+        height: 50px;
+        text-transform: uppercase;
+        font-family: Lucida Sans Unicode, monospace;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 2px;
+        padding-left: 13.3%;
+        color: #e70107;
+    }
+
+    .translate-item {
+        position: absolute;
+        transform: translateY(-100px);
+    }
+
+    .text-justify {
+        text-align: justify;
+        margin-top: 10px;
+        font-size: 16px;
+        line-height: 1.8;
+        font-family: system-ui;
+        display: -webkit-box;
+        -webkit-line-clamp: 12;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        height: 340px;
+        overflow: hidden;
+    }
+
+    .img-large {
+        width: 290px;
+        height: 460px;
+    }
+
+    .img-small {
+        width: 290px;
+        height: 320px;
+        padding-left: 40px;
+    }
+
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+        background-color: red;
+    }
+</style>
+
+<script>
+    let slideIndex = 1;
+    let isTimer = true;
+    showCustomerSlides(slideIndex);
+
+    function plusSlides(n) {
+        showCustomerSlides((slideIndex += n));
+    }
+
+    function currentSlide(n) {
+        isTimer = false;
+        autoSlides();
+        showCustomerSlides(slideIndex = n);
+    }
+
+    function showCustomerSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("slide-customers");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1;
+        }
+        if (n < 1) {
+            slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+
+    autoSlides();
+
+    function autoSlides() {
+        let timer = null;
+        if (isTimer) {
+            let i;
+            let slides = document.getElementsByClassName("slide-customers");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            timer = setTimeout(autoSlides, 3500);
+        } else {
+            clearTimeout(timer);
+        }
+    }
+</script>

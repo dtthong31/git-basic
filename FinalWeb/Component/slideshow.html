@@ -1,6 +1,67 @@
-<style>
-
-</style>
+<div class="slideshow-container">
+  <img
+    class="slider-auto"
+    src="./img/banner/home-banner-1.webp"
+    alt="banner-1"
+  />
+  <img
+    class="slider-auto"
+    src="./img/banner/home-banner-2.webp"
+    alt="banner-2"
+  />
+  <img
+    class="slider-auto"
+    src="./img/banner/home-banner-3.webp"
+    alt="banner-3"
+  />
+  <img
+    class="slider-auto"
+    src="./img/banner/home-banner-4.webp"
+    alt="banner-4"
+  />
+</div>
 <script>
+  let slideIndex = 0;
+  showSlides();
 
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("slider-auto");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
+    }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 4500); // Change image every 2 seconds
+  }
 </script>
+<style>
+  .slider-auto {
+    display: none;
+    max-width: 100%;
+    width: 100%;
+    height: 550px;
+  }
+
+  img {
+    vertical-align: middle;
+  }
+
+  /* Slideshow container */
+  .slideshow-container {
+    width: fit-contentc;
+    height: 650px;
+    width: 100%;
+    margin: auto;
+  }
+
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .text {
+      font-size: 11px;
+    }
+  }
+</style>

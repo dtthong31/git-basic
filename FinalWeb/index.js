@@ -1,15 +1,9 @@
-let slideIndex = 0;
-
-function showSlides() {
-    let i;
-    let slides = document.getElementsByClassName("slider-auto");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1 }
-    slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-
-showSlides();
+$(function () {
+  $(".navbar-container").load("./Component/Header.html");
+  $("footer").load("./Component/Footer.html");
+  $(".about-me").load("./Component/About.html");
+  $(".slider").load("./Component/Slideshow.html");
+  $(".other-service").load("./Component/OtherService.html");
+  $(".customer").load("./Component/Customer.html");
+  $(".info").load("./Component/NumberCounter.html");
+});

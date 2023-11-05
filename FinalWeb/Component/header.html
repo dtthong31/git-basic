@@ -1,132 +1,145 @@
-<a class="icon-nhile" href="/"><img style="margin-top: 25px;" src="/FinalWeb/img/icon.png" width="90px" /></a>
-<div class="navbar">
-    <a href="#home">HOME</a>
+<div class="navbar-content">
+  <a class="icon-nhile" href="/"><img class="image-menu" style="margin-top: 25px" src="/FinalWeb/img/icon.png"
+      width="90px" /></a>
+  <div class="navbar">
+    <a href="#home" style="color: #e70107">HOME</a>
     <a href="#news">PRIVATE COACHING</a>
     <div class="dropdown">
-        <button class="dropbtn">OTHER SERVICES
-            <i class="fa fa-angle-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="#bring">DIGITAL MARKETING</a>
-            <a href="#deliver">VIDEO EDITOR</a>
-            <a href="#package">GRAPHIC DESIGN</a>
-            <a href="#express">WEBSITE & APP DEVELOPMENT</a>
-            <a href="#express">SOCIAL MEDIA SUPPORT</a>
-            <a href="#express">PERSONAL BRANDING DEVELOPMENT</a>
-            <a href="#express">INTERIOR DESIGN</a>
-        </div>
+      <button class="dropbtn">
+        OTHER SERVICES
+        <i class="fa fa-angle-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#bring">DIGITAL MARKETING</a>
+        <a href="#deliver">VIDEO EDITOR</a>
+        <a href="#package">GRAPHIC DESIGN</a>
+        <a href="#express">WEBSITE & APP DEVELOPMENT</a>
+        <a href="#express">SOCIAL MEDIA SUPPORT</a>
+        <a href="#express">PERSONAL BRANDING DEVELOPMENT</a>
+        <a href="#express">INTERIOR DESIGN</a>
+      </div>
     </div>
     <div class="dropdown">
-        <button class="dropbtn">PROJECTS
-            <i class="fa fa-angle-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="#bring">NHILE OFFICIAL</a>
-            <a href="#deliver">NHILE FOUNDATION</a>
-            <a href="#package">MS NHI</a>
-            <a href="#express">KID K</a>
-            <a href="#express">IKIGAI ZONE</a>
-        </div>
+      <button class="dropbtn">
+        PROJECTS
+        <i class="fa fa-angle-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#bring">NHILE OFFICIAL</a>
+        <a href="#deliver">NHILE FOUNDATION</a>
+        <a href="#package">MS NHI</a>
+        <a href="#express">KID K</a>
+        <a href="#express">IKIGAI ZONE</a>
+      </div>
     </div>
     <div class="dropdown">
-        <button class="dropbtn">ABOUT US
-            <i class="fa fa-angle-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="#bring">REVIEWS</a>
-        </div>
+      <button class="dropbtn">
+        ABOUT US
+        <i class="fa fa-angle-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#bring">REVIEWS</a>
+      </div>
     </div>
     <a href="#home">FREE TRAINING</a>
     <a href="#news"> CONTACT</a>
+  </div>
 </div>
 
-<a href="/"><img src="/FinalWeb/img/nhile-foundation.jpg" width="161px" height="80px" /></a>
+<a href="/"><img class="image-menu" src="/FinalWeb/img/nhile-foundation.jpg" width="161px" height="80px" /></a>
 
 <style>
-    .navbar {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        font-family: Lucida Sans Unicode;
-        font-weight: 400;
-        font-style: normal;
-        color: #1d2122;
-        overflow-x: hidden;
-        line-height: 1.8;
-        word-wrap: break-word;
-        height: 80px;
-        background-color: white;
-    }
+  .navbar-content {
+    display: flex;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
 
-    .navbar a {
-        float: left;
-        font-weight: bold;
-        color: black;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: Lucida Sans Unicode, Helvetica;
+    font-weight: 400;
+    font-style: normal;
+    color: #1d2122;
+    /* overflow-x: hidden; */
+    line-height: 1.8;
+    word-wrap: break-word;
+    height: 80px;
+    background-color: white;
+  }
 
-    .dropdown {
-        float: left;
-        overflow: hidden;
-        padding: 4px;
-    }
+  .navbar a {
+    float: left;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
 
-    .dropdown .dropbtn {
-        font-weight: bold;
-        border: none;
-        outline: none;
-        color: black;
-        padding: 14px 16px;
-        background-color: inherit;
-        font-family: inherit;
-    }
+  .dropdown {
+    float: left;
+    overflow: hidden;
+    padding: 4px;
+  }
 
-    .navbar a:hover,
-    .dropdown:hover .dropbtn {
-        background-color: white;
-        color: #e70107;
-    }
+  .dropdown .dropbtn {
+    font-weight: bold;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    font-size: 14px;
+  }
 
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: white;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    }
+  .navbar a:hover,
+  .dropdown:hover .dropbtn {
+    background-color: white;
+    color: #e70107;
+  }
 
-    .dropdown-content a {
-        float: none;
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        text-align: left;
-    }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+  }
 
-    .dropdown-content a:hover {
-        background-color: #e70107;
-        color: white;
-    }
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
 
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
+  .dropdown-content a:hover {
+    background-color: #e70107;
+    color: white;
+  }
 
-    .fa {
-        font-size: 14px !important;
-        padding: 0% !important;
-    }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 
-    img {
-        padding-right: 30px;
-        padding-left: 30px;
-    }
+  .fa {
+    font-size: 14px !important;
+    padding: 0% !important;
+  }
 
-    .icon-nhile {
-        height: 80px;
-    }
+  .image-menu {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .icon-nhile {
+    height: 80px;
+    background-color: white;
+  }
 </style>
