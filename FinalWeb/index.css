@@ -15,7 +15,6 @@ header {
 
 .navbar-container {
     display: flex;
-    overflow: hidden;
     position: fixed;
     justify-content: center;
     align-items: center;
@@ -27,11 +26,6 @@ header {
 .navbar-container {
     transition-duration: 5s;
     transform: translateY(0px);
-}
-
-.navbar-container:hover {
-    height: 420px;
-    align-items: self-start;
 }
 
 /* Auto slider banner*/
@@ -81,4 +75,6 @@ header {
     height: 800px;
     margin-top: 50px;
     margin-bottom: 50px;
+    background-color: #f4f9fa;
+    justify-content: center;
 }
