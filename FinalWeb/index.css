@@ -1,80 +1,81 @@
 body {
-    /* background-color: aqua; */
-    margin: 0%;
+  /* background-color: aqua; */
+  margin: 0%;
 }
 
 header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    height: fit-content;
-    margin: 0%;
-    padding: 0%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  margin: 0%;
+  padding: 0%;
 }
 
 .navbar-container {
-    display: flex;
-    position: fixed;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    width: 100%;
-    font-size: 14px;
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  font-size: 16px;
 }
 
 .navbar-container {
-    transition-duration: 5s;
-    transform: translateY(0px);
+  transition-duration: 5s;
+  transform: translateY(0px);
 }
 
 /* Auto slider banner*/
 .intro-page {
-    display: flex;
-    width: 100%;
-    height: 650px;
-    justify-content: center;
+  display: flex;
+  width: 100%;
+  height: 650px;
+  justify-content: center;
 }
 
 .slider {
-    display: flex;
-    height: 650px;
+  display: flex;
+  width: 100%;
+  height: 650px;
 }
 
 /* Content container */
 .container {
-    display: block;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
+  display: block;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
 }
 
 /* about-me */
 .about-me {
-    font-family: Georgia;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 50%;
+  font-family: Georgia;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50%;
 }
 
 .other-service {
-    display: flex;
-    justify-content: center;
-    margin-top: 80px;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .customer {
-    display: flex;
-    flex-direction: column;
-    height: 800px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    background-color: #f4f9fa;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: #f4f9fa;
+  justify-content: center;
 }
