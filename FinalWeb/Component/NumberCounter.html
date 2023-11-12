@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Number Counting Animation</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .counter {
+        font-size: 45px;
+      }
+      .counter-info {
+        color: #e70107;
+        font-weight: bold;
+        font-family: Lucida Sans Unicode;
+      }
+      .counter-info p {
+        font-size: 13px;
+        text-transform: uppercase;
+      }
+      .container-info {
+        display: flex;
+        flex-direction: row;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container-info">
+      <div class="counters">
+        <div class="counter-wrapper">
+          <div class="counter-info">
+            <span class="counter" data-count="218000">0</span><span>+</span>
+            <p>Youtube subcribers</p>
+          </div>
+        </div>
+        <div class="counter-wrapper">
+          <div class="counter-info" style="color: #1d2122">
+            <span class="counter" data-count="423500">0</span><span>+</span>
+            <p>Tiktok Followers</p>
+          </div>
+        </div>
+        <div class="counter-wrapper">
+          <div class="counter-info" style="color: #183186">
+            <span class="counter" data-count="224000">0</span><span>+</span>
+            <p>Facebook Followers</p>
+          </div>
+        </div>
+      </div>
+      <div class="info">
+        <div class="content-info">
+          <img src="./img/Icon/privacy-life-coach.png" />
+          <p>PRIVACY LIFE COACH</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const counters = document.querySelectorAll(".counter");
+
+      counters.forEach((counter) => {
+        let initial_count = +counter.innerText;
+        const final_count = counter.dataset.count;
+        let new_increment_num = Math.floor(final_count / 10);
+
+        function updateCounting() {
+          initial_count += new_increment_num;
+          counter.innerText = initial_count.toLocaleString(3);
+          if (initial_count < final_count) {
+            setTimeout(() => {
+              updateCounting();
+            }, 100);
+          }
+        }
+
+        updateCounting();
+      });
+    </script>
+  </body>
+</html>
