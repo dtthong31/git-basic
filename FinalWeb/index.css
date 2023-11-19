@@ -59,6 +59,7 @@ header {
   align-items: center;
   width: 100%;
   height: 50%;
+  overflow: hidden;
 }
 
 .other-service {
@@ -78,4 +79,63 @@ header {
   margin-bottom: 50px;
   background-color: #f4f9fa;
   justify-content: center;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+  margin-top: 100px;
+}
+
+.animate-top {
+  position: relative;
+  animation: animate-top 1.5s;
+}
+
+@keyframes animate-top {
+  from {
+    top: -300px;
+    transform: translateY(-300px);
+    opacity: 0;
+  }
+
+  to {
+    top: 100;
+    opacity: 1
+  }
+}
+
+.animate-left {
+  animation: animate-left 1.5s
+}
+
+@keyframes animate-left {
+  from {
+    left: -300px;
+    transform: translateX(-1000px);
+    opacity: 0
+  }
+
+  to {
+    left: 100;
+    opacity: 1
+  }
+}
+
+.animate-right {
+  animation: animate-right 1.5s
+}
+
+@keyframes animate-right {
+  from {
+    right: -300px;
+    transform: translateX(1000px);
+    opacity: 0
+  }
+
+  to {
+    right: 100;
+    opacity: 1
+  }
 }

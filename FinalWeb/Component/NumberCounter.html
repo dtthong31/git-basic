@@ -1,86 +1,146 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Number Counting Animation</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    .counter {
-      font-size: 45px;
-    }
-
-    .counter-info {
-      color: #e70107;
-      font-weight: bold;
-      font-family: Lucida Sans Unicode;
-    }
-
-    .counter-info p {
-      font-size: 13px;
-      text-transform: uppercase;
-    }
-
-    .container-info {
-      display: flex;
-      flex-direction: row;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="container-info">
-    <div class="counters">
-      <div class="counter-wrapper">
-        <div class="counter-info">
-          <span class="counter" data-count="218000">0</span><span>+</span>
-          <p>Youtube subcribers</p>
-        </div>
-      </div>
-      <div class="counter-wrapper">
-        <div class="counter-info" style="color: #1d2122">
-          <span class="counter" data-count="423500">0</span><span>+</span>
-          <p>Tiktok Followers</p>
-        </div>
-      </div>
-      <div class="counter-wrapper">
-        <div class="counter-info" style="color: #183186">
-          <span class="counter" data-count="224000">0</span><span>+</span>
-          <p>Facebook Followers</p>
-        </div>
+<div class="container-info">
+  <div class="counters-info animate-left">
+    <div class="counter-wrapper">
+      <div class="counter-info">
+        <span class="counter" data-count="218000">0</span><span>+</span>
+        <p>Youtube subcribers</p>
       </div>
     </div>
-    <div class="info">
-      <div class="content-info">
-        <img src="./img/Icon/privacy-life-coach.png" />
-        <p>PRIVACY LIFE COACH</p>
+    <div class="counter-wrapper">
+      <div class="counter-info" style="color: #1d2122">
+        <span class="counter" data-count="423500">0</span><span>+</span>
+        <p>Tiktok Followers</p>
+      </div>
+    </div>
+    <div class="counter-wrapper">
+      <div class="counter-info" style="color: #183186">
+        <span class="counter" data-count="224000">0</span><span>+</span>
+        <p>Facebook Followers</p>
       </div>
     </div>
   </div>
+  <div class="table-info animate-right">
+    <table>
+      <tbody>
+        <tr>
+          <td class="img-info">
+            <img src="./img/Icon/privacy-life-coach.png" />
+          </td>
+          <td class="img-info">
+            <img src="./img/Icon/mentor.png" width="64" height="64" />
+          </td>
+          <td class="img-info">
+            <img src="./img/Icon/team-building.png" />
+          </td>
+          <td class="img-info">
+            <img src="./img/Icon/speaker.png" />
+          </td>
+        </tr>
+        <tr>
+          <td class="text-info-align">PRIVACY LIFE COACH</td>
+          <td class="text-info-align">MENTOR</td>
+          <td class="text-info-align">TEAM BUILDING</td>
+          <td class="text-info-align">SPEAKER</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
-  <script>
-    const counters = document.querySelectorAll(".counter");
 
-    counters.forEach((counter) => {
-      let initial_count = +counter.innerText;
-      const final_count = counter.dataset.count;
-      let new_increment_num = Math.floor(final_count / 10);
+<script>
+  const counters = document.querySelectorAll(".counter");
 
-      function updateCounting() {
-        initial_count += new_increment_num;
-        counter.innerText = initial_count.toLocaleString(3);
-        if (initial_count < final_count) {
-          setTimeout(() => {
-            updateCounting();
-          }, 100);
-        }
+  counters.forEach((counter) => {
+    let initial_count = +counter.innerText;
+    const final_count = counter.dataset.count;
+    let new_increment_num = Math.floor(final_count / 20);
+
+    function updateCounting() {
+      initial_count += new_increment_num;
+      counter.innerText = initial_count.toLocaleString(3);
+      if (initial_count < final_count) {
+        setTimeout(() => {
+          updateCounting();
+        }, 100);
       }
+    }
 
-      updateCounting();
-    });
-  </script>
-</body>
+    updateCounting();
+  });
+</script>
+<link rel="stylesheet" href="style.css" />
+<style>
+  .counter {
+    font-size: 45px;
+  }
 
-</html>
+  .counter-info {
+    color: #e70107;
+    font-weight: bold;
+    font-family: Lucida Sans Unicode;
+  }
+
+  .counter-info p {
+    font-size: 13px;
+    text-transform: uppercase;
+    margin: 0px;
+  }
+
+  .container-info {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .table-info {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .content-info {
+    border: solid 1.5px #d4d3d3;
+    width: 250px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    border: 2px solid #d4d3d3
+  }
+
+  table td {
+    border-left: 1.5px solid #d4d3d3;
+    border-width: 2px 2px 2px 2px;
+    margin: 0;
+    overflow: visible;
+    padding: 1em 2em;
+    width: 160px;
+    height: 80px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .img-info {
+    text-align: left;
+    vertical-align: bottom;
+  }
+
+  .text-info-align {
+    text-align: left;
+    vertical-align: top;
+    width: 30px;
+  }
+
+  .counter-info {
+    margin-right: 30px;
+  }
+</style>
