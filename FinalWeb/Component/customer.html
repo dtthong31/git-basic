@@ -2,7 +2,7 @@
 <div class="slideshow-customer">
     <div class="slide-customers fade">
         <div class="content-customer">
-            <div class="sub-content">
+            <div class="sub-content animate-left">
                 <h1>DOUGLAS STEVENSON</h1>
                 <p class="text-justify">
                     I've been working with Team Nhile for the past 12 weeks, and they have
@@ -21,8 +21,10 @@
                 </p>
                 <a href="">Read more</a>
             </div>
-            <img class="img-large" src="./img/Customer/douglas-large.webp" />
-            <img class="img-small" src="./img/Customer/douglas-small.webp" />
+            <div class="animate-right" style="display: flex; justify-content: center; align-items: center;">
+                <img class="img-large" src="./img/Customer/douglas-large.webp" />
+                <img class="img-small" src="./img/Customer/douglas-small.webp" />
+            </div>
         </div>
     </div>
     <div class="slide-customers fade">
@@ -167,7 +169,7 @@
 </style>
 
 <script>
-    let slideIndex = 1;
+    let slideIndex = 0;
     let isTimer = true;
     showCustomerSlides(slideIndex);
 

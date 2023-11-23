@@ -107,6 +107,9 @@ header {
 }
 
 .animate-left {
+  animation-timeline: scroll();
+
+  animation-fill-mode: both;
   animation: animate-left 1.5s
 }
 
